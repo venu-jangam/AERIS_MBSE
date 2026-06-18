@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AERIS FDM — MBSE Dashboard | Space Copy Inc.</title>
+  <meta name="description" content="Web-based Model-Based Systems Engineering dashboard for the AERIS field-deployable additive manufacturing platform." />
+  <!-- Inter + JetBrains Mono are referenced as design-system fonts; the app
+       degrades gracefully to system + monospace fonts when offline. -->
+  <style>
+    /* Inline @font-face fallbacks keep typography on-brand offline. */
+    :root{font-family:Inter,system-ui,sans-serif}
+  </style>
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body>
+  <!-- App shell is rendered by app.js into document.body -->
+  <noscript>
+    <div style="padding:40px;color:#E6EDF3;background:#0D1117;font-family:sans-serif">
+      The AERIS MBSE Dashboard requires JavaScript. Please enable it to view the model.
+    </div>
+  </noscript>
+
+  <!-- Model store + engine + UI + app (load order matters; plain globals,
+       no ES modules so the dashboard opens directly via file://). -->
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/thread.js"></script>
+  <script src="assets/js/ui.js"></script>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>
